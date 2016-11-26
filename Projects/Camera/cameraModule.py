@@ -3,7 +3,7 @@ import time
 import os
 import inspect
 
-def take_photo(location='/home/pi/PiStorms/images/', imgName='image01.png'):
+def take_photo(location='/home/pi/PiStormsprograms/images/', imgName='image01.png'):
     with picamera.PiCamera() as camera:
         camera.resolution = (1024, 768)
         camera.start_preview()

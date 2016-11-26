@@ -30,9 +30,9 @@ while not exit and count < 3:
         time.sleep(2)
         camera.capture(currentdir+'/'+'im2.png',format='png')
     '''
-    cameraModule.take_photo('/home/pi/PiStorms/images/', 'image01.png')
+    cameraModule.take_photo('/home/pi/PiStormsprograms/images/', 'image01.png')
     psm.screen.clearScreen()
-    psm.screen.fillBmp(30, 0, 240, 240, path='/home/pi/PiStorms/images/image01.png')
+    psm.screen.fillBmp(30, 0, 240, 240, path='/home/pi/PiStormsprograms/images/image01.png')
     count += 1
     time.sleep(5)
     if psm.isKeyPressed():
