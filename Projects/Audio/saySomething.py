@@ -1,6 +1,6 @@
 import time
 from espeak import espeak
 
-espeak.synth("What is my purpose?")
-
-time.sleep(10)
+def speak(message="What is my purpose?"):
+    espeak.synth(message)
+    time.sleep(10)
