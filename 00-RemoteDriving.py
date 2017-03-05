@@ -21,6 +21,7 @@ while not exit_program:
 
     rightMultiple = psm.BAS1.remoteRight(1)
     leftMultiple = psm.BAS1.remoteLeft(1)
+    otherMultiple = psm.BAS1.distanceRemoteIREV3(1)
 
     if rightMultiple == 0:
         psm.BBM1.float()
@@ -33,6 +34,7 @@ while not exit_program:
 
     psm.screen.termPrintAt(3, "Left Reading " + str(leftMultiple))
     psm.screen.termPrintAt(4, "Right Reading " + str(rightMultiple))
+    psm.screen.termPrintAt(5, "Other Reading " + str(otherMultiple))
 
     time.sleep(.1)
 

@@ -27,11 +27,10 @@ count = 0
 while(not exit and count < 3):
 #	psm.BBM1.runSecs(1,20,True);
 #	psm.BAM2.runSecs(1,20,True);
-	count+= 1
-	time.sleep(5)
+    count+= 1
+    time.sleep(5)
         
-        
-    if(psm.isKeyPressed() == True): # if the GO button is pressed
+    if psm.isKeyPressed(): # if the GO button is pressed
         psm.screen.clearScreen()
         psm.screen.termPrintln("") 
         psm.screen.termPrintln("Exiting to menu")
