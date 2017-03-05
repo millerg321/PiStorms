@@ -60,7 +60,7 @@ while not exit_program:
     psm.screen.termPrintAt(5, "Distance Reading " + str(distanceRemote))
     psm.screen.termPrintAt(6, "Heading Reading " + str(headingRemote))
 
-    if distanceRemote > 128:
+    if distanceRemote > 100:
         stop_driving()
     elif distanceRemote < 20:
         stop_driving()
