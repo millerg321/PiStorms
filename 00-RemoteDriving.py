@@ -24,11 +24,11 @@ def drive_forwards(speed):
 
 def drive_left(speed):
     psm.BAM1.setSpeed(-speed)
-    psm.BBM1.setSpeed(0)
+    psm.BBM1.float()
 
 
 def drive_right(speed):
-    psm.BAM1.setSpeed(0)
+    psm.BAM1.float()
     psm.BBM1.setSpeed(-speed)
 
 def stop_driving():
