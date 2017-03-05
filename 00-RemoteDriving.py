@@ -38,7 +38,7 @@ while not exit_program:
     psm.screen.termPrintAt(5, "Distance Reading " + str(distanceRemote))
     psm.screen.termPrintAt(6, "Heading Reading " + str(headingRemote))
 
-    time.sleep(1)
+    time.sleep(.1)
 
     if psm.isKeyPressed():
         psm.screen.clearScreen()
