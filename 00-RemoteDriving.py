@@ -24,14 +24,14 @@ while not exit_program:
     distanceRemote = psm.BAS1.distanceRemoteIREV3(1)
     headingRemote = psm.BAS1.headingIREV3(1)
 
-    # if rightMultiple == 0:
-    #     psm.BBM1.float()
-    # elif rightMultiple:
-    #     psm.BBM1.setSpeed(rightMultiple * -80)
-    # if leftMultiple == 0:
-    #     psm.BAM1.float()
-    # elif leftMultiple:
-    #     psm.BAM1.setSpeed(leftMultiple * -80)
+    if rightMultiple == 0:
+        psm.BBM1.float()
+    elif rightMultiple:
+        psm.BBM1.setSpeed(rightMultiple * -80)
+    if leftMultiple == 0:
+        psm.BAM1.float()
+    elif leftMultiple:
+        psm.BAM1.setSpeed(leftMultiple * -80)
 
     psm.screen.termPrintAt(3, "Left Reading " + str(leftMultiple))
     psm.screen.termPrintAt(4, "Right Reading " + str(rightMultiple))
