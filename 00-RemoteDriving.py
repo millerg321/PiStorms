@@ -71,7 +71,7 @@ while not exit_program:
     elif headingRemote == 0:
         drive_forwards(100)
 
-    time.sleep(.1)
+    time.sleep(1)
 
     if psm.isKeyPressed():
         psm.screen.clearScreen()
