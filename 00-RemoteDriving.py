@@ -68,14 +68,14 @@ while not exit_program:
 
     if distanceRemote > 100 or distanceRemote < 20:
         stop_driving()
-    elif headingRemote < 0:
-        drive_left(30)
     elif headingRemote > 0:
+        drive_left(30)
+    elif headingRemote < 0:
         drive_right(30)
     elif headingRemote == 0:
         drive_forwards(30)
 
-    time.sleep(1)
+    time.sleep(.5)
 
     if psm.isKeyPressed():
         psm.screen.clearScreen()
