@@ -21,6 +21,10 @@ def drive_forwards(speed):
     psm.BAM1.setSpeed(-speed)
     psm.BBM1.setSpeed(-speed)
 
+def drive_backwards(speed):
+    psm.BAM1.setSpeed(speed)
+    psm.BBM1.setSpeed(speed)
+
 
 def drive_left(speed):
     psm.BAM1.setSpeed(-speed)
@@ -34,9 +38,6 @@ def drive_right(speed):
 def stop_driving():
     psm.BAM1.float()
     psm.BBM1.float()
-
-
-
 
 
 while not exit_program:
@@ -60,16 +61,14 @@ while not exit_program:
     psm.screen.termPrintAt(5, "Distance Reading " + str(distanceRemote))
     psm.screen.termPrintAt(6, "Heading Reading " + str(headingRemote))
 
-    if distanceRemote > 100:
-        stop_driving()
-    elif distanceRemote < 20:
+    if distanceRemote > 100 or distanceRemote < 20:
         stop_driving()
     elif headingRemote < 0:
         drive_left(30)
     elif headingRemote > 0:
         drive_right(30)
     elif headingRemote == 0:
-        drive_forwards(100)
+        drive_forwards(30)
 
     time.sleep(1)
 

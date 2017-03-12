@@ -23,7 +23,9 @@
 # Date      Author      Comments
 #  July 2015  Henry     Initial Authoring from SensorShield import SensorShield
 
-import os,sys,inspect,time,thread
+import os
+import sys
+import inspect
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
@@ -36,11 +38,12 @@ psm.screen.termPrintln("Battery Voltage")
 psm.screen.termPrintln(" ")
 
 psm.BBS1.resetTouchesEV3()
-exit = False
+exit_program = False
 lastled = 0
-while(not exit):
+while(not exit_program):
     voltVal = psm.battVoltage()
     psm.screen.termReplaceLastLine(str(voltVal) + "V")
+    psm.screen.termReplaceLastLine()
 	
     if(voltVal >= 8and lastled != 1):
         psm.led(1,0,255,0)
@@ -56,8 +59,7 @@ while(not exit):
         lastled = 3
     if(psm.screen.checkButton(0,0,320,320)):
         psm.screen.termPrintln("")
-        psm.screen.termPrintln("Exiting to menu")
+        psm.screen.termPrintln("exit_programing to menu")
         psm.led(1,0,0,0)
         psm.led(2,0,0,0)
-        exit = True
-		
+        exit_program = True
