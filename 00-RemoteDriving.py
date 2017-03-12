@@ -30,14 +30,14 @@ def drive_backwards(speed):
 
 def drive_left(speed):
     psm.screen.termPrintAt(2, "Drive Left")
-    psm.BAM1.setSpeed(-speed)
-    psm.BBM1.float()
+    psm.BAM1.float()
+    psm.BBM1.setSpeed(-speed)
 
 
 def drive_right(speed):
     psm.screen.termPrintAt(2, "Drive Right")
-    psm.BAM1.float()
-    psm.BBM1.setSpeed(-speed)
+    psm.BAM1.setSpeed(-speed)
+    psm.BBM1.float()
 
 def stop_driving():
     psm.screen.termPrintAt(2, "Stop Driving")
