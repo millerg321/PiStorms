@@ -69,11 +69,11 @@ while not exit_program:
     if distanceRemote > 100 or distanceRemote < 20:
         stop_driving()
     elif headingRemote > 0:
-        drive_left(30)
+        drive_left(50)
     elif headingRemote < 0:
-        drive_right(30)
+        drive_right(50)
     elif headingRemote == 0:
-        drive_forwards(30)
+        drive_forwards(50)
 
     time.sleep(.5)
 
