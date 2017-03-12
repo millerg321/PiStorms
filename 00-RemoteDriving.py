@@ -18,24 +18,29 @@ psm.screen.termPrintln("Driving Ms Daisy")
 
 
 def drive_forwards(speed):
+    psm.screen.termPrintAt(2, "Drive Forwards")
     psm.BAM1.setSpeed(-speed)
     psm.BBM1.setSpeed(-speed)
 
 def drive_backwards(speed):
+    psm.screen.termPrintAt(2, "Drive Backwards")
     psm.BAM1.setSpeed(speed)
     psm.BBM1.setSpeed(speed)
 
 
 def drive_left(speed):
+    psm.screen.termPrintAt(2, "Drive Left")
     psm.BAM1.setSpeed(-speed)
     psm.BBM1.float()
 
 
 def drive_right(speed):
+    psm.screen.termPrintAt(2, "Drive Right")
     psm.BAM1.float()
     psm.BBM1.setSpeed(-speed)
 
 def stop_driving():
+    psm.screen.termPrintAt(2, "Stop Driving")
     psm.BAM1.float()
     psm.BBM1.float()
 
